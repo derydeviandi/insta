@@ -94,7 +94,7 @@ export default class login extends Component {
                 </View>
 
                 {/* Create account */}
-                <Text h5 style={{ alignSelf: "center" }}>Create Account</Text>
+                <Text h5 style={{ alignSelf: "center" }} onPress={() => this.props.navigation.navigate('register')}>Create Account</Text>
             </View>
         );
     }

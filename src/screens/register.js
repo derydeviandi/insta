@@ -135,6 +135,11 @@ export default class register extends Component {
                         />
                     </View>
                 </View>
+                <View style={{ flexDirection: "row", justifyContent: "center", marginTop: 15 }}>
+                    <Text >Have an account? </Text>
+                    <Text style={{ fontWeight: "bold" }} onPress={() => this.props.navigation.navigate('login')}>Login</Text>
+
+                </View>
 
             </View>
         );
