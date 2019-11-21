@@ -13,7 +13,7 @@ export default class login extends Component {
 
         return (
             <View style={{ flex: 1, justifyContent: 'center', paddingHorizontal: 20 }}>
-                <Text style={{ alignSelf: 'center' }} h1> InstaKilo </Text>
+                <Text style={{ alignSelf: 'center' }} h1> Insta </Text>
                 {/* Username */}
                 <View style={{ marginTop: 30 }}>
                     <Input
