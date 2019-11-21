@@ -24,7 +24,7 @@ export default class home extends Component {
                                 rounded
                                 source={{
                                     uri:
-                                        'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                                        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTk3ygf6ce5PBR_Tzy9h9ays0qndp7I_d9frICxOem4KPW4p5II',
                                 }}
                             />
                             <Text style={{ marginLeft: 15, fontWeight: 'bold', fontSize: 18 }}>Username</Text>
@@ -41,7 +41,7 @@ export default class home extends Component {
                     {/* Post Image */}
                     <View style={{ borderTopWidth: 0.3, borderTopColor: 'grey', marginTop: 10 }}>
                         <Image
-                            source={{ uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg' }}
+                            source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTk3ygf6ce5PBR_Tzy9h9ays0qndp7I_d9frICxOem4KPW4p5II' }}
                             style={{ width: 400, height: 400 }}
                         />
                     </View>

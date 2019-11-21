@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import Axios from 'axios'
 import { onRegisterSuccess } from '../redux/actions/users'
 import { urlApi } from '../supports/url';
+import { StackActions, NavigationActions } from 'react-navigation'
 
 class Register extends Component {
     state = {
@@ -74,7 +75,11 @@ class Register extends Component {
     }
     componentDidUpdate() {
         if (this.props.user) {
-            console.log(this.props.user)
+            const reset_stack = StackActions.reset({
+                index: 0,
+                actions: [NavigationActions.navigate({ routeName: 'home' })]
+            })
+            this.props.navigation.dispatch(reset_stack)
         }
     }
 
