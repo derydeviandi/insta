@@ -4,7 +4,7 @@ import { Text, Input, Button } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { connect } from 'react-redux'
 import Axios from 'axios'
-import { onRegisterSuccess } from '../redux/actions/users'
+import { onRegisterSuccess } from './../redux/actions/users'
 import { urlApi } from '../supports/url';
 import { StackActions, NavigationActions } from 'react-navigation'
 
@@ -73,6 +73,7 @@ class Register extends Component {
         // Kirim Data Ke APi
         // Redirect Ke HOME
     }
+
     componentDidUpdate() {
         if (this.props.user) {
             const reset_stack = StackActions.reset({
@@ -247,7 +248,6 @@ class Register extends Component {
 const mapStateToProps = (state) => {
     return {
         user: state.users.username,
-        // caption : state.bebas.caption
     }
 }
 

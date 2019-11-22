@@ -1,24 +1,25 @@
+import React from 'react'
 import { createStackNavigator } from 'react-navigation-stack'
 import { createAppContainer } from 'react-navigation'
-import LoginPage from './../screens/login'
-import RegisterPAge from './../screens/register'
-import HomePage from './../screens/home'
+import Login from './../screens/login'
+import Register from './../screens/register'
+import Home from './../screens/home'
+import MainTab from './home_explore_profile_post'
 
-const mainStack = createAppContainer(createStackNavigator(
 
+const MainStack = createAppContainer(createStackNavigator(
     {
-        login: LoginPage,
-        register: RegisterPAge,
-        home: HomePage
-
-
+        // root : destination screen
+        login: Login,
+        register: Register,
+        home: MainTab
     },
     {
+        // configuration
         initialRouteName: 'register',
         headerMode: "none"
     }
-
-
 ))
 
-export default mainStack
+
+export default MainStack;

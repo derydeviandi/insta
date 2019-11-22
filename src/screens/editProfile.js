@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-export default class explore extends Component {
+export default class editProfile extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,7 +11,7 @@ export default class explore extends Component {
     render() {
         return (
             <View>
-                <Text> explore </Text>
+                <Text> editProfile </Text>
             </View>
         );
     }
