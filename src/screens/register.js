@@ -8,6 +8,7 @@ import { onRegisterSuccess } from './../redux/actions/users'
 import { urlApi } from '../supports/url';
 import { StackActions, NavigationActions } from 'react-navigation'
 import { GoogleSignin, statusCodes } from '@react-native-community/google-signin'
+import { LoginButton, AccessToken } from 'react-native-fbsdk'
 
 const web_client_id = '933388570425-h7o6ulfg987fvtl24i6kamdehiujsdnq.apps.googleusercontent.com'
 
@@ -296,7 +297,7 @@ class Register extends Component {
                     </View>
                     <View style={{ flex: 1 }}>
                         {/* login facebook */}
-                        <Button
+                        {/* <Button
                             icon={
                                 <Icon
                                     name='facebook'
@@ -305,7 +306,24 @@ class Register extends Component {
                                 />
                             }
                             buttonStyle={{ backgroundColor: 'blue' }}
-                        />
+                        /> */}
+                        <LoginButton
+                            onLoginFinished={
+                                (error, result) => {
+                                    if (error) {
+                                        console.log("login has error: " + result.error);
+                                    } else if (result.isCancelled) {
+                                        console.log("login is cancelled.");
+                                    } else {
+                                        AccessToken.getCurrentAccessToken().then(
+                                            (data) => {
+                                                console.log(data.accessToken.toString())
+                                            }
+                                        )
+                                    }
+                                }
+                            }
+                            onLogoutFinished={() => console.log("logout.")} />
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 15 }}>
