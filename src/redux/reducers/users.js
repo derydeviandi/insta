@@ -1,7 +1,7 @@
 const users = {
-    email: '',
+    id: '',
     username: '',
-    // profile_pict: ''
+    profile_pict: ''
 }
 
 function UsersReducer(state = users, action) {

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "933388570425",
+    "firebase_url": "https://insta-c59dd.firebaseio.com",
+    "project_id": "insta-c59dd",
+    "storage_bucket": "insta-c59dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933388570425:android:3652aedd3bfe9b5cbee2e8",
+        "android_client_info": {
+          "package_name": "com.instakilo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933388570425-u1u7uq6qg8fjtjmmce9nllkkjsmfj725.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.instakilo",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "933388570425-h7o6ulfg987fvtl24i6kamdehiujsdnq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGb9az8SoFRadlNVLnsv3r0rrWo2X32Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933388570425-h7o6ulfg987fvtl24i6kamdehiujsdnq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -9,6 +9,7 @@ import editProfile from '../screens/editProfile'
 
 const MainTab = createAppContainer(createMaterialTopTabNavigator(
     {
+        // root
         home: {
             screen: Home,
             navigationOptions: {
@@ -35,10 +36,13 @@ const MainTab = createAppContainer(createMaterialTopTabNavigator(
         }
     },
     {
+        // configuration, menu bawah 
         tabBarPosition: 'bottom',
         tabBarOptions: {
             showIcon: true,
-            showLabel: false
+            showLabel: false,
+            indicatorStyle: { position: "absolute", top: 0, backgroundColor: 'black' },
+            style: { backgroundColor: 'white', borderTopWidth: 0.5, borderTopColor: 'grey' }
         }
     }
 

@@ -12,6 +12,7 @@ const MainStack = createAppContainer(createStackNavigator(
         // root : destination screen
         login: Login,
         register: Register,
+        // ketika home, redirect ke maintab dari home_explore_profile_post.js
         home: MainTab
     },
     {

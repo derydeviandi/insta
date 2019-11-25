@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
-import LoginPage from './src/screens/login'
-import RegisterPage from './src/screens/register'
-import Homepage from './src/screens/home'
 import MainStack from './src/routes/login_register_home'
 import 'react-native-gesture-handler'
 import Reducers from './src/redux/reducers/index'

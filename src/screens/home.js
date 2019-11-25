@@ -30,6 +30,7 @@ export default class home extends Component {
                             <Text style={{ marginLeft: 15, fontWeight: 'bold', fontSize: 18 }}>Username</Text>
 
                         </View>
+                        {/* tiga titik hitam */}
                         <View style={{ alignSelf: 'center' }}>
                             <Icon
                                 name='ellipsis-v'
@@ -48,22 +49,22 @@ export default class home extends Component {
                     <View style={{ flexDirection: 'row', paddingLeft: 15, marginTop: 15, justifyContent: 'space-between' }}>
                         <View style={{ flexDirection: 'row' }}>
                             <Icon
+                                // Likes
                                 style={{ marginRight: 20 }}
-                                // style={{borderWidth:0.5,borderColor:'black'}}
                                 name='heart-o'
                                 size={30}
                             />
                             <Icon
-                                // style={{borderWidth:0.5,borderColor:'black'}}
+                                // Comment
                                 name='comment-o'
                                 size={30}
                             />
                         </View>
                         <View>
                             <Icon
+                                // 
                                 style={{ marginRight: 20 }}
-                                // style={{borderWidth:0.5,borderColor:'black'}}
-                                name='tag'
+                                name='bookmark-o'
                                 size={30}
                             />
                         </View>
