@@ -71,7 +71,7 @@ class Register extends Component {
                         AsyncStorage.setItem('data', JSON.stringify({ email, username }), (err) => {
                             if (err) return alert(err.message)
                             // peribahan global state dan running component did update
-                            this.props.onRegisterSuccess({ email, username })
+                            this.props.onRegisterSuccess({ email, username, id })
                             alert(res.data.message)
                         })
                     }
@@ -126,6 +126,24 @@ class Register extends Component {
             })
             .catch((err) => {
 
+            })
+    }
+    initUser(token) {
+        fetch('https://graph.facebook.com/v2.5/me?fields=email,name,friends&access_token=' + token)
+            .then((response) => response.json())
+            .then((json) => {
+                // Some user object has been set up somewhere, build that user here
+                user.name = json.name
+                user.id = json.id
+                user.user_friends = json.friends
+                user.email = json.email
+                user.username = json.name
+                user.loading = false
+                user.loggedIn = true
+                user.avatar = setAvatar(json.id)
+            })
+            .catch(() => {
+                reject('ERROR GETTING DATA FROM FACEBOOK')
             })
     }
 

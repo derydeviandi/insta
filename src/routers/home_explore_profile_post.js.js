@@ -1,17 +1,39 @@
 import React from 'react'
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs'
 import { createAppContainer } from 'react-navigation'
-import Home from './../screens/home'
+import Home from '../screens/home'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import explore from '../screens/explore'
 import postImage from '../screens/postImage'
 import editProfile from '../screens/editProfile'
+import ProfileDetail from '../screens/profileDetail'
+import { createStackNavigator } from 'react-navigation-stack'
+import HomeDetailProfile from './home_detailprofile'
+import Settingprofile from '../screens/settingprofile'
+
+
+const Home_to_Profile = createAppContainer(createStackNavigator({
+    home: Home,
+    detail: ProfileDetail
+}, {
+    headerMode: "none"
+}))
+
+const profile_to_setting = createAppContainer(createStackNavigator({
+    profile: editProfile,
+    setting: Settingprofile
+}, {
+    headerMode: "none"
+}))
+
+
+// createStackNavigator = hanya redirect
+// createMaterialTopTabNavigator = redirect + tampilan 
 
 const MainTab = createAppContainer(createMaterialTopTabNavigator(
     {
-        // root
         home: {
-            screen: Home,
+            screen: Home_to_Profile,
             navigationOptions: {
                 tabBarIcon: <Icon name='home' size={24} />
             }
@@ -29,20 +51,19 @@ const MainTab = createAppContainer(createMaterialTopTabNavigator(
             }
         },
         editProfile: {
-            screen: editProfile,
+            screen: profile_to_setting,
             navigationOptions: {
                 tabBarIcon: <Icon name='user' size={24} />
             }
         }
     },
     {
-        // configuration, menu bawah 
         tabBarPosition: 'bottom',
         tabBarOptions: {
             showIcon: true,
             showLabel: false,
-            indicatorStyle: { position: "absolute", top: 0, backgroundColor: 'black' },
-            style: { backgroundColor: 'white', borderTopWidth: 0.5, borderTopColor: 'grey' }
+            indicatorStyle: { position: 'absolute', top: 0, backgroundColor: 'black' },
+            style: { backgroundColor: "white", borderTopWidth: 0.8, borderTopColor: 'gray' }
         }
     }
 
